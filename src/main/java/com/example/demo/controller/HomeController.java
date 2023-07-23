@@ -1,21 +1,23 @@
 package com.example.demo.controller;
 
-
-
-
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
 @RestController
-public class HomeController {
+@RequestMapping("/home")
+public class homecontroller {
 	
-	@RequestMapping("/employees12")
-	public String employee12() {
-		return "This is the 1st Application";
-		}
+	@GetMapping("/index")
+	public String index() {
+		return "This is from Home";
+	}
 	
-	
+	@GetMapping("/contact")
+	public String contact() {
+		return "This is from contact";
+	}
 
 }
